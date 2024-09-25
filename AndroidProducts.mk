@@ -5,4 +5,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_benz.mk
+    $(LOCAL_DIR)/aosp_benz.mk
