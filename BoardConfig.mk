@@ -12,6 +12,9 @@ DEVICE_PATH := device/oneplus/benz
 # Assert
 TARGET_OTA_ASSERT_DEVICE := OP5D3FL1
 
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
 # Display
 TARGET_SCREEN_DENSITY := 450
 
