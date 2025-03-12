@@ -91,6 +91,13 @@ odm/etc/camera/camera_engmode.xml
 odm/etc/camera/settings_fdc.txt
 odm/etc/camera/settings_fdc_lite.txt
 
+# Fingerprint
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
+odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v2.xml
+odm/lib64/libolc_vnd.so
+odm/lib64/vendor.oplus.hardware.olc2-V2-ndk.so
+
 # Sensors config
 odm/etc/sensor/config/benz_qrd_ois_system.json
 odm/etc/sensor/config/camano_mtp_alsps_hw_sip3535.json
@@ -118,6 +125,7 @@ odm/firmware/tp/24061/sys_edge_touch_config.xml
 
 # Vibrator
 odm/etc/aac_richtap.config
+vendor/lib64/libaacvibrator.so
 
 # Vibrator firmware
 odm/firmware/100ms_RTP_300.bin

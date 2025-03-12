@@ -18,6 +18,8 @@ namespace_imports = [
 ]
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff': blob_fixup()
+        .add_needed("libshims_aidl_fingerprint_v2.oplus.so"),
     'odm/etc/camera/CameraHWConfiguration.config': blob_fixup()
         .regex_replace('SystemCamera =  0;  0;  1;  1;', 'SystemCamera =  0;  0;  0;  0;')
 }  # fmt: skip
