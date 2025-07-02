@@ -14,6 +14,9 @@ $(call inherit-product, device/oneplus/aston/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Platform
+TARGET_BOARD_PLATFORM := kalama
+
 PRODUCT_NAME := lineage_aston
 PRODUCT_DEVICE := aston
 PRODUCT_MANUFACTURER := OnePlus

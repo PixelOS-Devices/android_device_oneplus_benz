@@ -1,11 +1,82 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
 ## are from OnePlus 12R (CPH2585_15.0.0.820(EX01)).
 
+# Current blobs with ELF checks disabled:
+# audio.primary.kalama.so depends on liblx-osal and vendor.qti.hardware.AGMIPC@1.0-impl, which are gnu makefile targets
+
 # ACDB
 odm/etc/acdbdata/Audio_Parameter_Version.txt
 odm/etc/acdbdata/FTM/acdb_cal.acdb
 odm/etc/acdbdata/FTM/workspaceFileXml.qwsp
 odm/etc/acdbdata/acdb_cal.acdb
+
+# ADSP modules
+odm/lib/rfsa/adsp/aiboost/libQnnHtpV73Skel.so;MODULE_SUFFIX=.aiboost
+odm/lib/rfsa/adsp/aiboost/libaiboostubwc_skel.so;MODULE_SUFFIX=.aiboost
+odm/lib/rfsa/adsp/capi_v3_oprec.so
+odm/lib/rfsa/adsp/libSuperRawPost_skel.so
+odm/lib/rfsa/adsp/libaisr_skel.so
+odm/lib/rfsa/adsp/libarc_gk_pt_hvx_skel.so
+odm/lib/rfsa/adsp/libtfadsp_sb4_0_rx.so
+odm/lib/rfsa/adsp/libtfadsp_sb4_0_tx.so
+odm/lib/rfsa/adsp/nlc.so
+odm/lib/rfsa/adsp/nlc_bgth.so
+vendor/lib/rfsa/adsp/bm3a68v08s11n29.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n30.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n35.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n36.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n37.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n38.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n39.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n40.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n46.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n47.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n48.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n49.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n52.bin
+vendor/lib/rfsa/adsp/bm3a68v08s11n53.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n02.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n03.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n04.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n06.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n07.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n08.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n09.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n12.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n13.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n14.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n15.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n16.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n17.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n18.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n19.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n20.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n21.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n22.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n23.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n24.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n25.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n26.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n27.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n28.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n41.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n42.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n43.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n44.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n45.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n50.bin
+vendor/lib/rfsa/adsp/bm3a73v08s11n51.bin
+vendor/lib/rfsa/adsp/chre_qsh_shim.so
+vendor/lib/rfsa/adsp/libQ6MSFR_manager_skel.so
+vendor/lib/rfsa/adsp/libQnnHtpV73Skel.so;MODULE_SUFFIX=_vendor
+vendor/lib/rfsa/adsp/libevadsp_3_0.so
+vendor/lib/rfsa/adsp/libosie_skel.so
+vendor/lib/rfsa/adsp/nearby.napp_header;MODULE_SUFFIX=.napp_header
+vendor/lib/rfsa/adsp/nearby.so
+
+# Audio
+odm/lib64/libtfa98xx.so
+vendor/lib64/hw/audio.primary.kalama.so;DISABLE_CHECKELF
 
 # Audio configs
 my_product/etc/default_volume_tables.xml:vendor/etc/default_volume_tables.xml
@@ -1242,6 +1313,34 @@ vendor/lib64/vendor.oplus.hardware.commondcs-V1-ndk_platform.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 
+# Camera firmware
+vendor/firmware/CAMERA_ICP.b00
+vendor/firmware/CAMERA_ICP.b01
+vendor/firmware/CAMERA_ICP.b02
+vendor/firmware/CAMERA_ICP.b03
+vendor/firmware/CAMERA_ICP.b04
+vendor/firmware/CAMERA_ICP.b05
+vendor/firmware/CAMERA_ICP.b06
+vendor/firmware/CAMERA_ICP.b07
+vendor/firmware/CAMERA_ICP.b08
+vendor/firmware/CAMERA_ICP.b09
+vendor/firmware/CAMERA_ICP.b10
+vendor/firmware/CAMERA_ICP.b11
+vendor/firmware/CAMERA_ICP.b12
+vendor/firmware/CAMERA_ICP.b13
+vendor/firmware/CAMERA_ICP.b14
+vendor/firmware/CAMERA_ICP.b15
+vendor/firmware/CAMERA_ICP.b16
+vendor/firmware/CAMERA_ICP.b17
+vendor/firmware/CAMERA_ICP.b18
+vendor/firmware/CAMERA_ICP.b19
+vendor/firmware/CAMERA_ICP.b20
+vendor/firmware/CAMERA_ICP.elf
+vendor/firmware/CAMERA_ICP.mbn
+vendor/firmware/CAMERA_ICP.mdt
+vendor/firmware/CAMERA_ICP_170.elf
+vendor/firmware/tof8801_firmware.bin
+
 # Charger
 odm/firmware/fastchg/23861/charging_hyper_mode_config.txt
 odm/firmware/fastchg/bms_heating_config.txt
@@ -1249,6 +1348,9 @@ odm/firmware/fastchg/charge_time_config.csv
 odm/firmware/fastchg/charging_thermal_config_default.txt
 odm/firmware/fastchg/smart_chg_config_table.txt
 vendor/etc/charger_fw_fstab.qti
+
+# Data
+vendor/etc/init/ipa_fws.rc
 
 # Display (Pixelworks)
 odm/etc/inparm/iris7_AA551_P_3_A0004_dsc_cmd_mode_panel/inParm14.txt
@@ -1279,13 +1381,248 @@ odm/etc/irissoft_AA551_P_3_A0004_dsc_cmd_mode_panel.fw
 odm/etc/irissoft_AA551_P_3_A0004_dsc_cmd_mode_panel.xml
 odm/firmware/pxlw_i7p_panel_AA551_P_3_A0004_dsc_cmd.fw
 
+# Display (Features)
+vendor/bin/feature_enabler_client
+vendor/etc/Oplus_QC_LTM_SM8550_2022_10_13.pfm
+vendor/etc/init/feature_enabler_client.rc
+vendor/lib64/libPanelChaplin.so
+
+# Display (HDR)
+vendor/lib64/libhdr_tm.so
+vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamicootf.so
+
+# Display (HWC)
+odm/etc/vintf/manifest/manifest_oplus_cwb.xml
+vendor/bin/hw/vendor.qti.hardware.display.composer-service
+vendor/bin/qdcmss
+vendor/etc/init/qdcmss.rc
+vendor/etc/snapdragon_color_libs_config.xml
+vendor/lib64/libcwb_client_vendor.so
+vendor/lib64/libcwb_qcom.so
+vendor/lib64/libdisplayconfig.qti.so
+vendor/lib64/libdpps.so
+vendor/lib64/libgame_enhance.so
+vendor/lib64/libhistogram.so
+vendor/lib64/libmemutils.so
+vendor/lib64/libqdcm-algo.so
+vendor/lib64/libqdcm-json-mode-parser.so
+vendor/lib64/libqdcm-mode-parser.so
+vendor/lib64/libqdutils.so
+vendor/lib64/libsdmcore.so
+vendor/lib64/libsdmdal.so
+vendor/lib64/libsdmutils.so
+vendor/lib64/libsnapdragoncolor-manager.so
+vendor/lib64/libsnapdragoncolor-qdcm.so
+vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+
+# Display (Pixelworks)
+odm/bin/hw/vendor.pixelworks.hardware.feature.irisfeature-service
+odm/bin/irisConfig
+odm/etc/init/vendor.pixelworks.hardware.feature.irisfeature-service-lazy.rc
+odm/etc/vintf/manifest/vendor.pixelworks.hardware.display@1.2.xml
+odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature.irisfeature-service.xml
+odm/lib64/hw/vendor.pixelworks.hardware.display@1.0-impl-1.2-i7.so
+odm/lib64/libpwirisIoctlWrapper.so
+odm/lib64/libpwirisPCS.so
+odm/lib64/libpwiriscalibrate.so
+odm/lib64/libpwirisfeature.so;MODULE_SUFFIX=_odm
+odm/lib64/libpwirishalwrapper.so;MODULE_SUFFIX=_odm
+odm/lib64/libpwirispq.so
+odm/lib64/libpwirisservicei7.so
+odm/lib64/libpwirissoft.so
+odm/lib64/libpwsoftirisPCS.so
+odm/lib64/libsnapdragoncolor-pxlw.so
+odm/lib64/vendor.pixelworks.hardware.display@1.0.so
+odm/lib64/vendor.pixelworks.hardware.display@1.1.so
+odm/lib64/vendor.pixelworks.hardware.display@1.2.so
+odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
+odm/lib64/vendor.pixelworks.hardware.feature@1.1.so
+vendor/lib64/libpwirisfeature.so
+vendor/lib64/libpwirisfeaturehal.so
+vendor/lib64/libpwirishal.so
+vendor/lib64/libpwirishalwrapper.so
+vendor/lib64/vendor.pixelworks.hardware.display@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.display@1.1.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.display@1.2.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.feature-V1-ndk.so
+vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.pixelworks.hardware.feature@1.1.so;MODULE_SUFFIX=_vendor
+
+# Display (SDM)
+vendor/etc/clstc_config_library.xml
+vendor/etc/display/DPU660.xml
+vendor/etc/display/DPU670.xml
+vendor/etc/display/DPU720.xml
+vendor/etc/display/DPU7__.xml
+vendor/etc/display/DPU820.xml
+vendor/etc/display/DPU8__.xml
+vendor/etc/display/DPU960.xml
+vendor/etc/display/DPU9__.xml
+vendor/etc/display/advanced_sf_offsets.xml
+vendor/etc/display/thermallevel_to_fps.xml
+vendor/lib64/libbacklight-calib.so
+vendor/lib64/libclstc_algorithm_adapter.so
+vendor/lib64/libclstc_gcp_adapter.so
+vendor/lib64/libclstc_tm.so
+vendor/lib64/libdigital-dimming.so
+vendor/lib64/libdisplayqos.so
+vendor/lib64/libdisplayskuutils.so
+vendor/lib64/libfeutils.so
+vendor/lib64/libhdr_backlight_adapter.so
+vendor/lib64/libintervmipc.so
+vendor/lib64/libmm-hdcpmgr.so
+vendor/lib64/libqrtrclient.so
+vendor/lib64/libqseed3.so
+vendor/lib64/librcmask.so
+vendor/lib64/libsdedrm.so
+vendor/lib64/libsdm-color.so
+vendor/lib64/libsdm-colormgr-algo.so
+vendor/lib64/libsdm-disp-vndapis.so
+vendor/lib64/libsdmextension.so
+vendor/lib64/libtestutils.so
+vendor/lib64/libtinyxml2_1.so
+vendor/lib64/libvmfilexfer.so
+
 # Display calibration data
 vendor/etc/display/qdcm_calib_data_AA551_P_3_A0004_dsc_cmd_mode_panel.json
 vendor/etc/ltm_config_AA551_P_3_A0004_dsc_cmd_mode_panel.xml
 
+# Display postprocessing
+vendor/bin/hw/vendor.display.color@1.0-service
+vendor/bin/ppd
+vendor/etc/init/vendor.display.color@1.0-service.rc
+vendor/lib64/libdisp-aba.so
+vendor/lib64/vendor.display.color@1.0.so
+vendor/lib64/vendor.display.color@1.1.so
+vendor/lib64/vendor.display.color@1.2.so
+vendor/lib64/vendor.display.color@1.3.so
+vendor/lib64/vendor.display.color@1.4.so
+vendor/lib64/vendor.display.color@1.5.so
+vendor/lib64/vendor.display.color@1.6.so
+vendor/lib64/vendor.display.color@1.7.so
+vendor/lib64/vendor.display.postproc@1.0.so
+
+# ESE
+odm/bin/hw/vendor.qti.esepowermanager@1.1-service
+odm/etc/init/vendor.qti.esepowermanager@1.1-service.rc
+odm/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
+odm/lib64/vendor.qti.esepowermanager@1.0.so
+odm/lib64/vendor.qti.esepowermanager@1.1.so
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libesepmconfig.so
+vendor/lib64/vendor.qti.esepowermanager@1.0.so;MODULE_SUFFIX=_vendor
+vendor/lib64/vendor.qti.esepowermanager@1.1.so;MODULE_SUFFIX=_vendor
+
 # eUICC - CPH2611_15.0.0.801(EX01)
 my_product/etc/permissions/EuiccGoogle_grant_permissions_list.xml:product/etc/permissions/privapp-permissions-euiccgoogle.xml|f2c044ab8db11f299b106375dbd06feef4ff84e0
 my_product/priv-app/EuiccGoogle/EuiccGoogle.apk:product/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED|e08fc712975d0c4baed73a2a09f1244ef67179fb
+
+# EVA
+vendor/etc/eva/facedetection/model3.dat
+vendor/lib64/libcv_common.so
+vendor/lib64/libeva.so
+vendor/lib64/libeva_util.so
+
+# EVA firmware
+vendor/firmware/evass.b00
+vendor/firmware/evass.b01
+vendor/firmware/evass.b02
+vendor/firmware/evass.b03
+vendor/firmware/evass.b04
+vendor/firmware/evass.b05
+vendor/firmware/evass.b06
+vendor/firmware/evass.b07
+vendor/firmware/evass.b08
+vendor/firmware/evass.b09
+vendor/firmware/evass.b10
+vendor/firmware/evass.b11
+vendor/firmware/evass.b12
+vendor/firmware/evass.b13
+vendor/firmware/evass.b14
+vendor/firmware/evass.b15
+vendor/firmware/evass.b16
+vendor/firmware/evass.b17
+vendor/firmware/evass.b18
+vendor/firmware/evass.b19
+vendor/firmware/evass.mbn
+vendor/firmware/evass.mdt
+
+# Fingerprint
+odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff
+odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
+odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v2.xml
+odm/lib64/libolc_vnd.so
+odm/lib64/vendor.oplus.hardware.olc2-V2-ndk.so
+
+# Fingerprint firmware
+odm/vendor/firmware/uff_gx.b00
+odm/vendor/firmware/uff_gx.b01
+odm/vendor/firmware/uff_gx.b02
+odm/vendor/firmware/uff_gx.b03
+odm/vendor/firmware/uff_gx.b04
+odm/vendor/firmware/uff_gx.b05
+odm/vendor/firmware/uff_gx.b06
+odm/vendor/firmware/uff_gx.b07
+odm/vendor/firmware/uff_gx.b08
+odm/vendor/firmware/uff_gx.mdt
+odm/vendor/firmware/uff_spi.b00
+odm/vendor/firmware/uff_spi.b01
+odm/vendor/firmware/uff_spi.b02
+odm/vendor/firmware/uff_spi.b03
+odm/vendor/firmware/uff_spi.b04
+odm/vendor/firmware/uff_spi.b05
+odm/vendor/firmware/uff_spi.b06
+odm/vendor/firmware/uff_spi.b07
+odm/vendor/firmware/uff_spi.b08
+odm/vendor/firmware/uff_spi.mdt
+
+# Graphics (Adreno)
+vendor/lib64/libkcl.so
+
+# Graphics (Adreno firmware)
+vendor/firmware/a740_sqe.fw
+vendor/firmware/a740_zap.b00
+vendor/firmware/a740_zap.b01
+vendor/firmware/a740_zap.b02
+vendor/firmware/a740_zap.elf
+vendor/firmware/a740_zap.mbn
+vendor/firmware/a740_zap.mdt
+vendor/firmware/gen70e00_sqe.fw
+vendor/firmware/gen70e00_zap.mbn
+vendor/firmware/gmu_gen70200.bin
+vendor/firmware/gmu_gen70e00.bin
+vendor/gpu/kbc/sequence_manifest.bin
+vendor/gpu/kbc/unified_kbcs_64.bin
+vendor/gpu/kbc/unified_ksqs.bin
+
+# Media
+vendor/etc/media_codecs_kalama.xml
+vendor/etc/media_codecs_kalama_vendor.xml
+vendor/etc/media_codecs_performance_kalama.xml
+vendor/etc/media_codecs_performance_kalama_vendor.xml
+vendor/etc/media_kalama/video_system_specs.json
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_kalama.xml
+vendor/lib64/libqcodec2_cvpfilter.so
+vendor/lib64/libqcodec2_streaminteg_filter.so
+vendor/lib64/libqcodec2_utils.so
+
+# Neural networks
+odm/lib64/aiboost/libQnnHtp.so;MODULE_SUFFIX=.aiboost
+odm/lib64/aiboost/libQnnHtpPrepare.so;MODULE_SUFFIX=.aiboost
+odm/lib64/aiboost/libQnnHtpV73Stub.so;MODULE_SUFFIX=.aiboost
+odm/lib64/aiboost/libQnnSystem.so;MODULE_SUFFIX=.aiboost
+odm/lib64/libaiboost_qnn_sr.so
+odm/lib64/libaiboost_sr.so
+odm/lib64/libaiboost_ubwc.so
+vendor/lib64/libQnnCpu.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libQnnHtp.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libQnnHtpPrepare.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libQnnHtpV73Stub.so;MODULE_SUFFIX=_vendor
+vendor/lib64/libQnnSystem.so
+vendor/lib64/libqnnengine.so
 
 # NFC
 odm/etc/nfc/libnfc-mtp-SN220.conf_23861:vendor/etc/libnfc-nxp.conf
@@ -1298,6 +1635,31 @@ odm/bin/touchDaemon|3e2e306a5358ea9f51029af9ec11710a19a3c353
 odm/etc/init/init.touchDaemon.rc|f46064b8ecadf59fdd58ccdb8200f884739255c8
 odm/etc/init/vendor-oplus-hardware-touch-V2-service.rc|05de56dc4879c2cca3eebdc5716b03165c6aaf1f
 odm/etc/vintf/manifest/manifest_touch_aidl.xml|533fa17a03339bb0ddb42029e20fd9b20e530101
+
+# Performance
+vendor/etc/lm/AdaptLaunchFeature.xml
+vendor/etc/lm/sPLHFeature.xml
+vendor/etc/perf/powerhint.xml
+vendor/etc/pwr/AODPowerOptFeature.xml
+vendor/etc/pwr/PSMPowerOptFeature.xml
+vendor/etc/pwr/StandbyFeature.xml
+vendor/lib64/libsplh.so
+
+# SCVE
+vendor/lib64/libscveCommon.so
+vendor/lib64/libscveCommon_stub.so
+vendor/lib64/libscveObjectSegmentation.so
+vendor/lib64/libscveObjectSegmentation_stub.so
+vendor/lib64/libscveObjectTracker.so
+vendor/lib64/libscveObjectTracker_stub.so
+
+# Secure element
+odm/bin/hw/vendor.qti.secure_element@1.2-service
+odm/etc/init/vendor.qti.secure_element@1.2-service.rc
+odm/etc/vintf/manifest/manifest_secure_element.xml
+odm/lib64/android.hardware.secure_element@1.0-impl.so
+vendor/lib64/libGPMTEEC_vendor.so
+vendor/lib64/libGPTEE_vendor.so
 
 # Sensors config
 odm/etc/sensor/config/aston_qrd_ois_system.json
@@ -1314,6 +1676,32 @@ odm/etc/sensor/config/kailua_mtp_pocket.json
 odm/etc/sensor/config/kailua_mtp_smart_prox.json
 odm/etc/sensor/config/lux_aod.json
 odm/etc/sensor/sensor_config.json
+vendor/etc/sensors/config/chre_dynamic_sensors.json
+vendor/etc/sensors/config/kailua_bu52053nvx_0.json
+vendor/etc/sensors/config/kailua_default_sensors.json
+vendor/etc/sensors/config/kailua_dynamic_sensors.json
+vendor/etc/sensors/config/kailua_dynamic_sensors_template.json
+vendor/etc/sensors/config/kailua_hdk_ak991x_0.json
+vendor/etc/sensors/config/kailua_hdk_lsm6dsv_0.json
+vendor/etc/sensors/config/kailua_hdk_lsm6dsv_1.json
+vendor/etc/sensors/config/kailua_hhg_ak991x_0.json
+vendor/etc/sensors/config/kailua_hhg_lsm6dsv_0.json
+vendor/etc/sensors/config/kailua_irq.json
+vendor/etc/sensors/config/kailua_lps22df_0.json
+vendor/etc/sensors/config/kailua_lsm6dsv_0.json
+vendor/etc/sensors/config/kailua_lsm6dsv_1.json
+vendor/etc/sensors/config/kailua_mtp_lsm6dsv_0.json
+vendor/etc/sensors/config/kailua_mtp_lsm6dsv_1.json
+vendor/etc/sensors/config/kailua_power_0.json
+vendor/etc/sensors/config/kailua_qrd_lsm6dsv_0.json
+vendor/etc/sensors/config/kailua_qrd_tmd2755_0.json
+vendor/etc/sensors/config/kailua_qsh_ble_0.json
+vendor/etc/sensors/config/kailua_sht4x_0.json
+vendor/etc/sensors/config/kailua_tmd2755_0.json
+vendor/etc/sensors/config/kailua_vertigo_ak991x_0.json
+vendor/etc/sensors/config/kailua_vertigo_lsm6dsv_0.json
+vendor/etc/sensors/config/kailua_vertigo_lsm6dsv_1.json
+vendor/etc/sensors/config/qsh_camera.json
 
 # Touchscreen firmware
 odm/firmware/tp/23801/FW_S3910_BOE.img
@@ -1354,3 +1742,6 @@ odm/etc/wifi/kiwi/bdwlan.b0a
 odm/etc/wifi/kiwi/bdwlan.b0ie
 odm/etc/wifi/kiwi/bdwlan.elf
 odm/etc/wifi/kiwi/regdb.bin
+odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
+vendor/etc/wifi/icm.conf
+vendor/etc/wifi/vendor_cmd.xml
