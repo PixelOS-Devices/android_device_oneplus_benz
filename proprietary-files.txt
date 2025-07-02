@@ -1519,6 +1519,10 @@ odm/firmware/ufs/SKhynix-HN8T15DEHKX075.bin
 odm/firmware/ufs/move_target_ufs_fw_to_oplusreserve1.sh
 odm/firmware/ufs/ufs_version_config.xml
 
+# Vibrator
+odm/etc/aac_richtap.config
+vendor/lib64/libaacvibrator.so
+
 # Vibrator firmware
 odm/firmware/100ms_RTP_300.bin
 odm/firmware/120ms_RTP_301.bin
