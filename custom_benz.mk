@@ -12,12 +12,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/benz/device.mk)
 
 # Inherit some common PixelOS stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
 
 # Platform
 TARGET_BOARD_PLATFORM := crow
 
-PRODUCT_NAME := aosp_benz
+PRODUCT_NAME := custom_benz
 PRODUCT_DEVICE := benz
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
