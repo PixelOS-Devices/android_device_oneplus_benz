@@ -14,12 +14,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 2376
+TARGET_SCREEN_HEIGHT := 2412
 TARGET_SCREEN_WIDTH := 1080
 
 # Display
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/display_id_4630946342906530435.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946342906530435.xml
+    $(LOCAL_PATH)/configs/display_id_4630946743308105858.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630946743308105858.xml
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
@@ -44,7 +44,7 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
 # Inherit from the common OEM chipset makefile.
-$(call inherit-product, device/oneplus/sm8550-common/common.mk)
+$(call inherit-product, device/oneplus/sm7550-common/common.mk)
 
 # Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/salami/salami-vendor.mk)
+$(call inherit-product, vendor/oneplus/benz/benz-vendor.mk)
