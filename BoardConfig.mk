@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/oneplus/benz
+USE_PREBUILT_KERNEL ?= false
 
 # A/B
 AB_OTA_UPDATER := true
@@ -65,10 +66,13 @@ BOARD_RAMDISK_USE_LZ4 := true
 # Display
 TARGET_SCREEN_DENSITY := 450
 
+ifneq ($(USE_PREBUILT_KERNEL), true)
+$(warning "##################################################")
 # DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_NEEDS_DTBOIMAGE := true
+endif
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
@@ -100,6 +104,23 @@ BOARD_KERNEL_IMAGE_NAME := Image
 
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8550
 
+ifeq ($(USE_PREBUILT_KERNEL), true)
+KERNEL_PREBUILTS_PATH := device/oneplus/benz-kernel
+TARGET_FORCE_PREBUILT_KERNEL := true
+KERNEL_LTO := none
+TARGET_NO_KERNEL_OVERRIDE := true
+BOARD_KERNEL_BINARIES := kernel
+BOARD_PREBUILT_DTBOIMAGE := $(KERNEL_PREBUILTS_PATH)/dtbo.img
+TARGET_FORCE_PREBUILT_KERNEL := true
+TARGET_PREBUILT_KERNEL := $(KERNEL_PREBUILTS_PATH)/kernel
+TARGET_PREBUILT_DTB := $(KERNEL_PREBUILTS_PATH)/dtb.img
+
+PRODUCT_COPY_FILES += \
+    $(KERNEL_PREBUILTS_PATH)/kernel:kernel \
+    $(call find-copy-subdir-files,*,$(KERNEL_PREBUILTS_PATH)/system_dlkm,$(TARGET_COPY_OUT_SYSTEM_DLKM)) \
+    $(call find-copy-subdir-files,*,$(KERNEL_PREBUILTS_PATH)/vendor_dlkm,$(TARGET_COPY_OUT_VENDOR_DLKM)) \
+    $(call find-copy-subdir-files,*,$(KERNEL_PREBUILTS_PATH)/vendor_ramdisk,$(TARGET_COPY_OUT_VENDOR_RAMDISK))
+else
 TARGET_KERNEL_ADDITIONAL_FLAGS := CONFIG_OPLUS_DEVICE_DTBS=y CONFIG_BENZ_DTB=y
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
@@ -143,6 +164,8 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/wlan/qcacld-3.0/.qca6750 \
     qcom/opensource/bt-kernel \
     nxp/opensource/driver
+
+endif
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
