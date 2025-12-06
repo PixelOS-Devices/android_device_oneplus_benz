@@ -1,5 +1,9 @@
 [
   {
+    "repository": "PixelOS-Devices/android_device_oneplus_benz-kernel",
+    "target_path": "device/oneplus/benz-kernel"
+  },
+  {
     "repository": "PixelOS-AOSP/android_hardware_oplus",
     "target_path": "hardware/oplus"
   },

@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/oneplus/benz
+USE_PREBUILT_KERNEL ?= true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -67,8 +68,13 @@ TARGET_SCREEN_DENSITY := 450
 
 # DTB / DTBO
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+ifeq ($(USE_PREBUILT_KERNEL), true)
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_KERNEL_SEPARATED_DTBO := true
+else
 BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
 TARGET_NEEDS_DTBOIMAGE := true
+endif
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
@@ -100,6 +106,9 @@ BOARD_KERNEL_IMAGE_NAME := Image
 
 TARGET_KERNEL_SOURCE := kernel/oneplus/sm8550
 
+ifeq ($(USE_PREBUILT_KERNEL), true)
+include device/oneplus/benz-kernel/BoardConfig.mk
+else
 TARGET_KERNEL_ADDITIONAL_FLAGS := CONFIG_OPLUS_DEVICE_DTBS=y CONFIG_BENZ_DTB=y
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
@@ -143,6 +152,7 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/wlan/qcacld-3.0/.qca6750 \
     qcom/opensource/bt-kernel \
     nxp/opensource/driver
+endif
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
